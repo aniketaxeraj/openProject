@@ -13,3 +13,4 @@ function check(value,callback) {
 check(array,(x,y,z) => {
     console.log(z)
 })
+
