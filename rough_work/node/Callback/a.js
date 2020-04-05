@@ -14,3 +14,4 @@ check(array,(x,y,z) => {
     console.log(z)
 })
 
+
