@@ -29,13 +29,13 @@ let detail = [
 //In this by_char provide input to check the matched keyword!!!!
 
 let find = {
-    by_char : "boney"
+    by_char : "z"
 };
 
 let array = []
 
-    detail.filter(x => {
-        Object.keys(x).forEach(y => {
+    detail.forEach(x => {
+        Object.keys(x).filter(y => {
             if(x[y]){
                 let str = x[y].toString()
                 if(str.includes(find.by_char) && !array.includes(x)){
