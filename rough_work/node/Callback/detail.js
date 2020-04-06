@@ -3,19 +3,20 @@ let detail = [
         name: "bhaiya",
         age: 22,
         roll: 2216202,
-        city: "chhapra"
+        city: "chhapraz",
     },
     {
         name: "raj",
         age: 20,
         roll: 2218201,
-        city: "chhaprae"
+        city: "chhapraz"
     },
     {
         name: "aniket",
         age: 20,
         roll: 2218201,
-        city: "chhapra"
+        city: "chhapra",
+        home : "boney",
     },
     {
         name: "jerry",
@@ -28,19 +29,22 @@ let detail = [
 //In this by_char provide input to check the matched keyword!!!!
 
 let find = {
-    //by_value: "jerry",
-    by_char : "20"
+    by_char : "boney"
 };
-detail.forEach(x => {
-    for(y in x){
-        //if(x[y] == find.by_value)console.log("hurray! : %s",x)
-        if(x[y]){
-            let str = x[y].toString()
-            if(str.includes(find.by_char)){
-                console.log("root : %s and word : %s and matched str : %s",x,x[y],find.by_char)
-                break;
+
+let array = []
+
+    detail.filter(x => {
+        Object.keys(x).forEach(y => {
+            if(x[y]){
+                let str = x[y].toString()
+                if(str.includes(find.by_char) && !array.includes(x)){
+                    array.push(x)
+                }
             }
-        }
-    }
-    console.log('----------------')
-})
+        })
+    })
+
+    console.log(array)
+
+
